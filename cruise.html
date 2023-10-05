@@ -16,14 +16,14 @@
 <body>
     <h2>Lakshmi Sai Teja Padam goes on a cruise</h2>
 <form>
-    <input type="checkbox" id="check1" name="Shares Cabin"value="True">
-    <label for="check1">Shares Cabin</label></br>
+    <input type="checkbox" id="st1" name="Shares Cabin" value="True">
+    <label for="st1">Shares Cabin</label></br>
   
-    <input type="checkbox" id="check2" name="Breakfast"value="True">
-    <label for="check2">Breakfast</label></br>
+    <input type="checkbox" id="st2" name="Breakfast" value="True">
+    <label for="st2">Breakfast</label></br>
   
-    <input type="checkbox" id="check3" name="Pool Pass"value="False">
-    <label for="check3">Pool Pass</label>
+    <input type="checkbox" id="st3" name="Pool Pass" value="False">
+    <label for="st3">Pool Pass</label>
 <br>
 
     <input class="btn btn-success mb-3" value="Select a cruise" onclick="selectCruise()">
@@ -32,31 +32,35 @@
 <p id="result">Cruise selection is shown here</p>
 <br>
 <hr>
+
+
 <form>
-    <label for="No_days">Enter the number of days </label>
-    <input type ="text" id="No_days" name="No_days"value="days">
+    <label for="f1_days">Enter the number of days </label>
+    <input type ="text" id="No_days" name="f1_days"value="days">
      <br>
-     <label for="No_price">Enter price</label>
-    <input type ="text" id="No_price" name="No_price"> <br>
+     <label for="f1_price">Enter price</label>
+    <input type ="text" id="No_price" name="f1_price"> <br>
     <br>
     <input class="btn btn-success" type="button" onclick="updateCruise()" value="Update the cruise">
 </form>
+
+
 <script> 
 
 var my_cruise={shared:"True",breakfast:"True",pool:"True"}
     function selectCruise()
     {
     my_cruise={}
-    my_cruise.shared = document.getElementById("checkbox1").checked
-    my_cruise.breakfast = document.getElementById("checkbox2").checked
-    my_cruise.pool = document.getElementById("checkbox3").checked
+    my_cruise.shared = document.getElementById("st1").checked
+    my_cruise.breakfast = document.getElementById("st2").checked
+    my_cruise.pool = document.getElementById("st3").checked
     out = document.getElementById("result")
     out.innerHTML=JSON.stringify(my_cruise)
     }
 function updateCruise (){
     console.log("Getting form values")
-    days = document.getElementById("No_days").value
-    price = document.getElementById("No_price").value
+    days = document.getElementById("st1_days").value
+    price = document.getElementById("st1_price").value
     my_cruise.days = days
     my_cruise.price=price
     
