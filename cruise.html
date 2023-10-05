@@ -36,7 +36,7 @@
 
 <form>
     <label for="f1_days">Enter the number of days </label>
-    <input type ="text" id="No_days" name="f1_days"value="days">
+    <input type ="text" id="No_days" name="f1_days">
      <br>
      <label for="f1_price">Enter price</label>
     <input type ="text" id="No_price" name="f1_price"> <br>
@@ -47,7 +47,7 @@
 
 <script> 
 
-var my_cruise={shared:"True",breakfast:"True",pool:"True"}
+var my_cruise={shared:"True",breakfast:"True",pool:"False"}
     function selectCruise()
     {
     my_cruise={}
@@ -59,8 +59,8 @@ var my_cruise={shared:"True",breakfast:"True",pool:"True"}
     }
 function updateCruise (){
     console.log("Getting form values")
-    days = document.getElementById("st1_days").value
-    price = document.getElementById("st1_price").value
+    days = document.getElementById("No_days").value
+    price = document.getElementById("No_price").value
     my_cruise.days = days
     my_cruise.price=price
     
