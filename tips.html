@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-    <title>WeappsAssignment6tips</title>
+    <title>WebappsAssignment06tips</title>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -25,7 +25,7 @@
 
     <input type="button" onclick="tips()" value="Show tip">
 </form>
-<p id="result">calculatedTip</p>
+<p id="result">calTip</p>
 
 <script> 
 
@@ -33,17 +33,17 @@
 function tips(){
     var base=parseFloat(prompt(document.getElementById(base)));
     var tip_percentage=parseFloat(prompt(document.getElementById(tip_percentage)));
-    let toShow=" "
+    let output=" "
     for(let i=0;i<5;i++)
     {
-        const tipPercentage = tip_percentage + i * 4;
-        const calculatedTip = (base * tipPercentage) / 100;
-        toShow += `${tipPercentage}% is ${calculatedTip};` ;
+        const tipPercent = tip_percentage + i * 4;
+        const calTip = (base * tipPercent) / 100;
+        output += `${tipPercent}% is ${calTip};` ;
         
     }
     
     out = document.getElementById("result")
-    out.innerHTML = "Tips are:"+toShow
+    out.innerHTML = "Tips are:"+output
 }
 </script>
 <hr>
@@ -52,30 +52,30 @@ function tips(){
     <input type="radio" id="sum" name="arthimeticOP" value="sum" onclick="chooseOp()">
     <label for="sum">Sum</label></br>
   
-    <input type="radio" id="diff" name="arthimeticOP" value="difference" onclick="chooseOp()">
-    <label for="diff">diff</label></br>
+    <input type="radio" id="diff" name="arthimeticOP" value="diff" onclick="chooseOp()">
+    <label for="diff">difference</label></br>
   
-    <input type="radio" id="mult" name="arthimeticOP" value="product" onclick="chooseOp()">
-    <label for="mult">mult</label>
+    <input type="radio" id="product" name="arthimeticOP" value="product" onclick="chooseOp()">
+    <label for="product">product</label>
 <br>
 </form>
 <br>
-<p id="arthop">basic operations result is shown here</p>
+<p id="aop">basic operations result is shown here</p>
 <script>
     function chooseOp ()
     {
         console.log("Getting form values")
         baseValue = parseFloat(document.getElementById("base").value)
         tipValue = parseFloat(document.getElementById("tip_percentage").value)
-        answer = document.getElementById("arthop")
+        answer = document.getElementById("aop")
         if(document.getElementById("sum").checked){
           answer.innerHTML="Sum of "+baseValue+" and"+tipValue+" is "+(baseValue+tipValue)
         }
-        else if(document.getElementById("diff").checked){
-          answer.innerHTML="diff of "+baseValue+" and"+tipValue+" is "+(baseValue-tipValue)
+        else if(document.getElementById("difference").checked){
+          answer.innerHTML="difference of "+baseValue+" and"+tipValue+" is "+(baseValue-tipValue)
         }
       
-        else if(document.getElementById("mult").checked){
+        else if(document.getElementById("product").checked){
             answer.innerHTML="product of "+baseValue+" and"+tipValue+" is "+(baseValue*tipValue)
         }
         answer.style.color="#ff0000"
