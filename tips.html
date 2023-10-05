@@ -55,8 +55,8 @@ function tips(){
     <input type="radio" id="diff" name="arthimeticOP" value="diff" onclick="chooseOp()">
     <label for="diff">difference</label></br>
   
-    <input type="radio" id="product" name="arthimeticOP" value="product" onclick="chooseOp()">
-    <label for="product">product</label>
+    <input type="radio" id="mult" name="arthimeticOP" value="product" onclick="chooseOp()">
+    <label for="mult">mult</label>
 <br>
 </form>
 <br>
@@ -65,18 +65,18 @@ function tips(){
     function chooseOp ()
     {
         console.log("Getting form values")
-        baseValue = parseFloat(document.getElementById("base").value)
-        tipValue = parseFloat(document.getElementById("tip_percentage").value)
+        base = parseFloat(document.getElementById("base").value)
+        tip_percentage = parseFloat(document.getElementById("tip_percentage").value)
         answer = document.getElementById("aop")
         if(document.getElementById("sum").checked){
-          answer.innerHTML="Sum of "+baseValue+" and"+tipValue+" is "+(baseValue+tipValue)
+          answer.innerHTML="Sum of "+base+" and"+tip_percentage+" is "+(base+tip_percentage)
         }
-        else if(document.getElementById("difference").checked){
-          answer.innerHTML="difference of "+baseValue+" and"+tipValue+" is "+(baseValue-tipValue)
+        else if(document.getElementById("diff").checked){
+          answer.innerHTML="difference of "+base+" and"+tip_percentage+" is "+(base-tip_percentage)
         }
       
-        else if(document.getElementById("product").checked){
-            answer.innerHTML="product of "+baseValue+" and"+tipValue+" is "+(baseValue*tipValue)
+        else if(document.getElementById("mult").checked){
+            answer.innerHTML="product of "+base+" and"+tip_percentage+" is "+(base*tip_percentage)
         }
         answer.style.color="#ff0000"
     }

@@ -75,25 +75,24 @@ function checkAuthor()
 <div class="container">
   <img src="Amsterdam.jpg" alt="Amsterdam city" width="100" height="100" onclick="selectImage()" id="city_img">
   <script>
-    let useImage = 1
+    let useImage = 1;
     function selectImage()
     {
       switch(useImage)
       {
         case 1:
-          document.getElementById("city_img").src ="Mumbai.jpg"
-          useImage+=1
+          document.getElementById("city_img").src ="Mumbai.jpg";
+          useImage=2;
           break;
         case 2:
-          document.getElementById("city_img").src="Portland.jpg"
-          useImage+=1
+          document.getElementById("city_img").src="Portland.jpg";
+          useImage=3;
           break;
         case 3:
-          document.getElementById("city_img").src="Amsterdam.jpg"
-          useImage=1
+          document.getElementById("city_img").src="Amsterdam.jpg";
+          useImage=1;
           break;
-        default:
-          document.getElementById("city_img").src="Amsterdam.jpg"
+        
       }
     }
 }
